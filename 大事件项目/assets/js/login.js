@@ -42,9 +42,10 @@ $(function () {
   $('#form_login').on('submit', function (e) {
     e.preventDefault();
     $.ajax({
+      method: 'POST',
       url: '/api/login',
       // url: `${mod_url}/api/login`,
-      method: 'POST',
+      
       data: $(this).serialize(),
       success: function (res) {
         if (res.status !== 0) {
