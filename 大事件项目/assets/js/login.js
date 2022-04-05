@@ -45,7 +45,7 @@ $(function () {
       method: 'POST',
       url: '/api/login',
       // url: `${mod_url}/api/login`,
-      
+
       data: $(this).serialize(),
       success: function (res) {
         if (res.status !== 0) {

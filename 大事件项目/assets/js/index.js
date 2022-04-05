@@ -8,10 +8,12 @@ function getUserInfo() {
             if (res.status !== 0) {
                 return layui.layer.msg('获取用户信息失败')
             }
+            //user_pic一直显示null
+            // console.log(res.data.user_pic);
             // localStorage.setItem('user_pic',res.data.user_pic);
             renderAvatar(res.data);
         },
-        
+
     })
 }
 function renderAvatar(user) {
@@ -27,6 +29,7 @@ function renderAvatar(user) {
         $('.text-avatar').html(first).show();
     }
 }
+
 $(function () {
     getUserInfo();
     let layer = layui.layer;
@@ -40,4 +43,6 @@ $(function () {
             layer.close(index);
         });
     })
+
+
 })
