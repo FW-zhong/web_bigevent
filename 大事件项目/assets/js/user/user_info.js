@@ -31,6 +31,8 @@ $(function () {
 
     $(".layui-form").on('submit', function (e) {
         e.preventDefault();
+        // console.log(form.val("formUserInfo"));
+        // console.log($(this).serialize());
         $.ajax({
             method: 'POST',
             url: '/my/userinfo',
